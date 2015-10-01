@@ -1,13 +1,13 @@
 
-public class Building {
-	double height;
+public class Building {// superclass
+	int height;
 
-	public double getHeight() {
+	public int getHeight() {
 		System.out.println(height);
 		return height;
 	}
 
-	public void setHeight(double height) {
+	public void setHeight(int height) {
 		this.height = height;
 	}
 	
