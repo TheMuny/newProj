@@ -1,6 +1,6 @@
 
 public class Building {// superclass
-	int height;
+	int height;//quantity of stages
 
 	public int getHeight() {
 		System.out.println(height);

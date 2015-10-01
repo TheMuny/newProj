@@ -16,7 +16,7 @@ public class skyScraper extends Building{
 		// TODO Auto-generated method stub
 
 		skyScraper S = new skyScraper();// create new object 
-		S.setHeight(15);//set stage in our building
+		S.setHeight(3);//set stage in our building
 		S.getHeight();// get stage in our building
 		
 	}
