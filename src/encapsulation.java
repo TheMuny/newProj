@@ -1,9 +1,9 @@
 
 public class encapsulation {
 	
-	private int i; //ставим модификатор private
+	private int i; //here we choose modifier private
 
-void set(int now){
+void set(int now){// get and set methods
 	i=now;
 }
   int get(){
@@ -12,11 +12,12 @@ void set(int now){
 }
 
 
-class encapsulationTestDrive {
+class encapsulationTestDrive {// class starter
 	public static void main(String[] args){
-		encapsulation en = new encapsulation();
-		en.set(6);
-		System.out.println(en.get()); // вот тут и работает инкапсуляция, переменную
-		//можно достать только из метода гет
+		encapsulation en = new encapsulation();//create new object
+		en.set(6);// set variable
+		System.out.println(en.get()); // realisation of encapsulation.
+		//variable is available only from method get
+	
 	}
 }
