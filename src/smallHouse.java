@@ -4,8 +4,10 @@ public class smallHouse extends Building {
 	@Override//annotation override here we change method of superclass
 	public int getHeight() {
 		if(height <= 5){
-		System.out.println(height+" - this is smallHouse");}
-		System.out.println("Height = " + height);
+		System.out.println(height+" - this is smallHouse");
+		}else{
+		System.out.println("Height = " + height + " high for smallHouse :-/ ");
+		}
 		return height;
 	}
 	
@@ -14,7 +16,7 @@ public class smallHouse extends Building {
 		// TODO Auto-generated method stub
 
 		smallHouse S = new smallHouse();// create new object 
-		S.setHeight(5);//set stage in our building
+		S.setHeight(6);//set stage in our building
 		S.getHeight();// get stage in our building
 		
 	}

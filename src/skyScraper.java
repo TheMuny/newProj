@@ -4,8 +4,10 @@ public class skyScraper extends Building{
 	@Override//annotation override here we change method of superclass
 	public int getHeight() {//change
 		if(height>5){
-		System.out.println(height+" - this is skyScraper");}
-		System.out.println("Height = " + height);
+		System.out.println(height+" - this is skyScraper");
+		}else{
+		System.out.println("Height = " + height+ " Look like not enoght for  skyScraper ;-)");
+		}
 		return height;
 	}
 	
