@@ -1,11 +1,14 @@
 import java.util.ArrayList; //импортируем объект ArrayList в класс DotCom
 
 
-public class DotCom {//создание класса дотком
+public class DotCom {//создание класса "корабль"
+	
 	private ArrayList<String> locationCells;/*объявляем переменную locationCells 
 	как объект класса ArrayList хранящий значения 	типа String */
 	
-	String NameOfSite;
+	String NameOfShip;// переменная хранящая имена кораблей
+	
+	
 	public void setLocationCells(ArrayList<String> loc){/* объявляем метод set c параметром
 	идентичным значению locationCells */
 		locationCells=loc;// параметр метода принимает аргумент из переменной locationCells
@@ -13,16 +16,18 @@ public class DotCom {//создание класса дотком
 	public String checkYourself(String userInput){/* объявляем метод get со строковым параметром
 	 и типом возвращаемого значения String*/
 		 
-	 String result ="Мимо";/* объявляем строковую переменную -
-	 - результат, со значением по умолчанию "Мимо" */
+	 String result ="Мимо";/* объявляем строковую переменную - результат, со значением по умолчанию "Мимо" */
 	 
 	 int index = locationCells.indexOf(userInput);/* Объявляем целочисленную переменную
 	 index чтобы проверить  значение введенное игроком на наличие в locationCells	 */
 	 
 	 if (index >=0){//объявляем ветвление
 		 locationCells.remove(index);// из переменной locationCells удаляется значение по индексу
-		 if(locationCells.isEmpty()){// если arraylist пуст это было роковое попадание
+		 if(locationCells.isEmpty()){/* (используем метод isEmpty() чтоб проверить все ли ардесса разгаданы)
+			 если arraylist пуст это было роковое попадание*/
+			 
 			 result = "Потопил";
+		//	 System.out.println("ты потопил - " + NameOfShip);
 			 }else{// если не пуст это было просто попадание
 				 result = "Попал";
 		 }
