@@ -14,18 +14,25 @@ public class Second_0210 {
 		
 	}
 
-	 public void  fisrtAndSecond(){// method of obtaining first and last digit
+	 public void  minAndMax(){// obtaining min and max digit
+	
+		 int a0 = (int)(d*100);
+		 int a1 = a0 % 10;	//last	
+	   	 int a2 = (a0/10) % 10;
+	     int a3 = (a0/100)%10;
+		 int a4 = (a0/1000%10);
+	   	 int a5 = (a0/10000%10);
 		 
-//		double a1 = d*100;		// move dot to 2 step
-//		int a2 = (int)a1;//  
-		
-		int a = (int)d;//the first  digit
-		
-//		int b = a2/ 10 % 10;// the second digit
-		
-		double c1 = (d*100)%10;// the third digit
-		int c = (int)c1;
-		
-		System.out.println(a+" and "+c);
+		 
+		 int [] array = {a1,a2,a3,a4,a5};
+	        int max = 0;
+	        int min = 0;
+	        for(int i = 0; i<array.length; i++){
+	            if(max<array[i])
+	                max = array[i];
+	            if(min>array[i])
+	                min = array[i];
+	        }		 
+			 System.out.println("min - "+min+" "+"max - "+max);
 	}
 }
