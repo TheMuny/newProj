@@ -12,7 +12,7 @@ public class RunFile_0210 {// enter 0210
 		D.plusAll();
 				
 		Second_0210 D1 = new Second_0210();
-		D1.setD(328.66);
+		D1.setD(532.56);
 		D1.minAndMax();
 				
 		Fourth_0510 D3 = new Fourth_0510();
