@@ -13,7 +13,7 @@ public class FromIntToByteArray {
 		// TODO Auto-generated method stub
 
 		FromIntToByteArray D = new FromIntToByteArray();
-		byte[] converted  =  D.intToByteArray(55);
+		byte[] converted  =  D.intToByteArray(55);//
 				
 	}
 

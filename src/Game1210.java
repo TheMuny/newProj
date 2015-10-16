@@ -39,7 +39,7 @@ public class Game1210 {
     	boolean test = false;
         int userGuess = 0;
     	do{
-    	Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
     	if(sc.hasNextInt()){
         userGuess = sc.nextInt();
         test=true;}
