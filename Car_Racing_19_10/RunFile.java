@@ -1,5 +1,5 @@
 
-public class RunFile implements Nitrogen_Injection{
+public class RunFile {
 
 	
 	public static void main(String[] args) {
