@@ -1,5 +1,5 @@
 
-public class RunFile {
+public class RunFile implements Nitrogen_Injection{
 
 	
 	public static void main(String[] args) {
@@ -10,9 +10,16 @@ public class RunFile {
 		Bolide bolide = new Bolide();
 		Rally_Car rcar = new Rally_Car();
 		
+		
+		
 		car.turnRight();
-		rcar.nitrogenInjection();
+		
 	
+	}
+
+	public void nitrogenInjection() {
+		// TODO Auto-generated method stub
+		
 	}
 
 
