@@ -1,8 +1,5 @@
 
-public abstract class Racing_Car extends Automobile {
+public abstract class Racing_Car extends Automobile implements Nitrogen_Injection {
 
-	void nitrogenInjection(){
-		
-		System.out.println("впрыск азота");
-	}
+
 }
