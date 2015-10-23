@@ -6,10 +6,19 @@ public abstract class Automobile {
 	int steering_wheel;
 	String  body;
 	
-	 abstract void toRide();
-	 abstract void slowDown();
-	 abstract void turnLeft();
-	 abstract void turnRight();
+	
+	  void toRide(){
+		  System.out.println("еду");
+	  };
+	  void slowDown(){
+		  System.out.println("торможу");
+	  };
+	  void turnLeft(){
+		  System.out.println("поворачиваю влево");
+	  };
+	  void turnRight(){
+		  System.out.println("поворачиваю вправо");
+	  };
 	 
 	 
 	 
