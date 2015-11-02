@@ -21,27 +21,25 @@ public class Address implements com.logistic.api.model.person.Address {
 		this.code = code;
 	}
 	
+	//__________________________________________________________________
+	
 	@Override
-		public String getStreet() {
-		// TODO Auto-generated method stub
+		public String getStreet() {		
 		return street;
 	}
 	
 	@Override
-		public String getCity() {
-		// TODO Auto-generated method stub
+		public String getCity() {		
 		return city;
 	}
 	
 	@Override
-		public String getCountry() {
-		// TODO Auto-generated method stub
+		public String getCountry() {		
 		return country;
 	}
 	
 	@Override
-	public int getCode() {
-		// TODO Auto-generated method stub
+	public int getCode() {		
 		return code;
 	}	
 }

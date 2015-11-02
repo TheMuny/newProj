@@ -9,17 +9,17 @@ public class Person implements com.logistic.api.model.person.Person{
 	 * @param args
 	 */
 	
+	 private Address Location;
+	 private FullName Data;
 
 	@Override
-	public Address getAddress() {
-		
-		return null;
+	public Address getAddress() {		
+		return Location;
 	}
 
 	@Override
-	public FullName getFullName() {
-		// TODO Auto-generated method stub
-		return null;
+	public FullName getFullName() {	
+		return Data;
 	}
 
 }
