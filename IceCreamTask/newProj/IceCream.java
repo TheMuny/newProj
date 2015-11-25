@@ -2,10 +2,10 @@ package newProj;
 
 public class IceCream {
 
-	private String color;
-	private String taste;
-	private int weight;
-	private int  size;
+	private final String color;
+	private final String taste;
+	private final int weight;
+	private final int  size;
 	
 	
 	public String getColor() {
@@ -24,10 +24,7 @@ public class IceCream {
 	
 	
 	IceCream(){
-		this.color  = "white";
-		this.taste  = "milky";
-		this.weight = 5;
-		this.size   = 1;
+		 this("white", "milky", 5, 1);
 	}
 	IceCream(String color,String taste,int weight,int size){
 		this.color  = color;

@@ -1,22 +1,60 @@
 package newProj;
 
+import java.util.Random;
+
 public class Main {
 
 	
-	public static void cteateIceCream(){
-		//Потом попытатся при помощи фабричного метода создать мороженное и отдать его ребенку. 
+	private static IceCream iceCream;
+	private static  String[] colors={"brown","red","green"};
+	private static  String[] taste = {"strawberry","mint","chocolate"};
+	
+	public static void cteateIceCream(String color,String taste){
+		//Потом попытатся при помощи фабричного метода создать мороженное и отдать его ребенку. 	
+		iceCream  = new IceCream(color,taste,new Random().nextInt(4),new Random().nextInt(6));
+		
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		
-		Children Sindy = new Children("red","strawberry",5,1);
-		Children Jhon = new Children("green","mint",2,3);
-		Children Barbara = new Children("brown","chocolate",4,2);
+		Children Sindy = new Children("red","strawberry",5,1,"Sindy");
+		Children Jhon = new Children("green","mint",2,3,"Jhon");
+		Children Barbara = new Children("brown","chocolate",4,2,"Barbara");
 		
 		
-		
-	}
-
+		while(true){
+		    int s = new Random().nextInt(colors.length);
+		    int t = new Random().nextInt(taste.length);
+			cteateIceCream(colors[s],taste[t]);
+		try {			
+			Sindy.acceptIceCream(iceCream);
+			System.out.println("Sindy says  <<Thank you so much, it is my favourite ice cream>>");
+			break;
+		}catch (Exception e){ 			
+			System.out.println("Sindy says  <<go to hell. I don't like this shit>>");
+			try{
+				Jhon.acceptIceCream(iceCream);
+				System.out.println("Jhon says  <<Thank you so much, it is my favourite ice cream>>");
+				break;
+			}catch(Exception e1){
+				System.out.println("Jhon says  <<go to hell. I don't like this shit>>");
+				try{
+					Barbara.acceptIceCream(iceCream);
+					System.out.println("Barbara says  <<Thank you so much, it is my favourite ice cream>>");
+					break;
+				}catch(Exception e2){
+					System.out.println("Barbara says  <<go to hell. I don't like this shit>>");
+					System.out.println("Children dont  like your ice cream");
+			     	}
+				}
+			}			
+		}
+	}	
 }
+			
+
+		
+
+

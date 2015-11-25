@@ -2,28 +2,32 @@ package newProj;
 
 public class Children {
 
-	private String name;	
-	private String color;
-	private String taste;
-	private int weight;
-	private int  size;
+	private String name;
+	private IceCream iceCream;
 	
-	Children(String color,String taste, int weight,int  size){
-		this.color=color;
-		this.taste=taste;
-		this.weight=weight;
-		this.size=size;
+	private String favouritColor;
+	private String favouritTaste;
+	private int favouritWeight;
+	private int  favouritSize;
+	
+	
+	Children(String color,String taste, int weight,int  size,String name){
+		this.favouritColor=color;
+		this.favouritTaste=taste;
+		this.favouritWeight=weight;
+		this.favouritSize=size;
+		this.name =name;
 	}
 		
-	void acceptIceCream(IceCream iceCream){
-		try{
-			if(iceCream.getColor()==color&&iceCream.getTaste()==taste){
-				System.out.println("i like it. Thank you so much");
+	public void acceptIceCream(IceCream iceCream) throws Exception{	
+		
+			if(iceCream.getColor()==favouritColor&&iceCream.getTaste()==favouritTaste
+					&&iceCream.getWeight()==favouritWeight&&iceCream.getSize()==favouritSize){
+				System.out.println(name + "i like it so much");
+				this.iceCream = iceCream;
 			}else{
-				throw  new Exception();
-				}
-		}catch(Exception e){
-			System.out.println("i dont like this shit");
-		}
+				throw new Exception();				
+			}
+		
 	}
 }
