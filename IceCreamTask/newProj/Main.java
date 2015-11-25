@@ -11,7 +11,7 @@ public class Main {
 	
 	public static void cteateIceCream(String color,String taste){
 		//Потом попытатся при помощи фабричного метода создать мороженное и отдать его ребенку. 	
-		iceCream  = new IceCream(color,taste,new Random().nextInt(4),new Random().nextInt(6));
+		iceCream  = new IceCream(color,taste,new Random().nextInt(6),new Random().nextInt(6));
 		
 	}
 	
@@ -28,6 +28,7 @@ public class Main {
 		    int s = new Random().nextInt(colors.length);
 		    int t = new Random().nextInt(taste.length);
 			cteateIceCream(colors[s],taste[t]);
+		//  System.out.println(s+" "+t);
 		try {			
 			Sindy.acceptIceCream(iceCream);
 			System.out.println("Sindy says  <<Thank you so much, it is my favourite ice cream>>");
