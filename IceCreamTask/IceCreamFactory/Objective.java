@@ -1,6 +1,6 @@
-package newProj;
+package IceCreamFactory;
 
-public class Objective {
+public interface Objective {
 
 	
 	/**

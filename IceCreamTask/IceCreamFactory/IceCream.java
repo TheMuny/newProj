@@ -1,4 +1,4 @@
-package newProj;
+package IceCreamFactory;
 
 public class IceCream {
 

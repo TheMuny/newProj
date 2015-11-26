@@ -1,4 +1,4 @@
-package newProj;
+package IceCreamFactory;
 
 import java.util.Random;
 
@@ -19,9 +19,9 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		
-		Children Sindy = new Children("red","strawberry",5,1,"Sindy");
-		Children Jhon = new Children("green","mint",2,3,"Jhon");
-		Children Barbara = new Children("brown","chocolate",4,2,"Barbara");
+		Children Sindy = new Children("red","strawberry",3,5,"Sindy");
+		Children Jhon = new Children("green","mint",1,2,"Jhon");
+		Children Barbara = new Children("brown","chocolate",2,4,"Barbara");
 		
 		
 		while(true){

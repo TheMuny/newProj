@@ -1,4 +1,4 @@
-package newProj;
+package IceCreamFactory;
 
 public class Children {
 
@@ -23,7 +23,7 @@ public class Children {
 		
 			if(iceCream.getColor()==favouritColor&&iceCream.getTaste()==favouritTaste
 					&&iceCream.getWeight()==favouritWeight&&iceCream.getSize()==favouritSize){
-				System.out.println(name + "i like it so much");
+				System.out.println(name + " says <<I like it so much>>");
 				this.iceCream = iceCream;
 			}else{
 				throw new Exception();				
