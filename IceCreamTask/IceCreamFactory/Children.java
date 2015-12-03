@@ -10,6 +10,9 @@ public class Children {
 	private int favouritWeight;
 	private int  favouritSize;
 	
+	Children(){
+		this("red","strawberry",2,3,"Paula");
+	}
 	
 	Children(String color,String taste, int weight,int  size,String name){
 		this.favouritColor=color;
