@@ -1,18 +1,19 @@
 package task;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
-import java.util.*;
+import java.util.stream.Collectors;
 
 
 
 
-public class Solving {	
+public class ApplyToArrayList {	
 	
-	static List<Obj> myList = new ArrayList<Obj>();
+	
+	static List<Obj> myList;;
 	static String s[]= {"Mage","Warrior","Shaman","Priest","Hunter","Rogue"};
 	
 	
@@ -36,14 +37,19 @@ public class Solving {
 	
 	public static void main(String[] args){
 		
-		Solving L = new Solving();
-		
+		ApplyToArrayList L = new ApplyToArrayList();
+		myList =  new LinkedList();
+		myList =  new ArrayList();
 		for(int i=0;i<20;i++){			
 			int v = new Random().nextInt(6);		
 			
-	     	L.myList.add(new Obj(s[v],true,1,2,3));
+	     	L.myList.add(new Obj(s[v]));
 	     //	System.out.println(L.myList.get(i).getName());
 	     	}
-	        L.myList.sort(by_NAME);
+     //    L.myList.sort(by_NAME);
+	       List list =  L.myList.stream().sorted(by_NAME).collect(Collectors.toList());	       
+	       myList = list;
+	       ArrayList s = new ArrayList();
+	       
 	}
 }

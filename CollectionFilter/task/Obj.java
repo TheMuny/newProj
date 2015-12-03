@@ -14,6 +14,18 @@ public class Obj {
 		Obj(){
 			this("dsf",true,5,5,5);
 		}
+		Obj(String name){
+			this(name,true,5,5,5);
+		}
+		Obj(String name,boolean	isAlive){
+			this(name,isAlive,5,5,5);
+		}
+		Obj(String name,boolean	isAlive,int health){
+			this(name,isAlive,health,5,5);
+		}
+		Obj(String name,boolean	isAlive,int health,int attack){
+			this(name,isAlive,health,attack,5);
+		}
 		Obj(String name,boolean	isAlive,int health,int attack,int cost){
 			this.name = name;
 			this.isAlive = isAlive;
@@ -21,6 +33,7 @@ public class Obj {
 			this.attack = attack;
 			this.cost = cost;
 		}
+		
 		
 		public int compareTo(Obj o) {
 	        String name = getName();
