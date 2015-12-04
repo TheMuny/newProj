@@ -18,7 +18,7 @@ public class ApplyToArrayList {
 	
 	
 	
-    private static final Comparator<Obj> by_NAME = new Comparator<Obj>() {
+    private  Comparator<Obj> by_NAME = new Comparator<Obj>() {
         @Override
         public int compare(Obj o1, Obj o2) {
             if(o1.getName().equalsIgnoreCase(o2.getName())) {
@@ -35,6 +35,11 @@ public class ApplyToArrayList {
     };
 	
 	
+	public Comparator<Obj> getBy_NAME() {
+		return by_NAME;
+	}
+
+
 	public static void main(String[] args){
 		
 		ApplyToArrayList L = new ApplyToArrayList();
@@ -47,7 +52,7 @@ public class ApplyToArrayList {
 	     //	System.out.println(L.myList.get(i).getName());
 	     	}
      //    L.myList.sort(by_NAME);
-	       List list =  L.myList.stream().sorted(by_NAME).collect(Collectors.toList());	       
+	       List list =  L.myList.stream().sorted(L.by_NAME).collect(Collectors.toList());	       
 	       myList = list;
 	       ArrayList s = new ArrayList();
 	       
