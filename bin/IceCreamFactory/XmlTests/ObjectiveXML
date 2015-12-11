@@ -1,0 +1,21 @@
+
+Домашнее задание
+1) Создать XML файл в котором описаны дети и мороженное. Структура - произвольная. 
+2) Созданную структуру распарсить в обьекты при помощи SAX и DOM парсеров. 
+Для SAX: в startElement для каждого Child и IceCream нужно создавать соответсвующие обьекты которые будут 
+заполнятся по мере чтения XML, в endElement - сохранение текщего распарсиваемого обьекта.
+Для DOM: зная структуру XML создаем необходимые обьекты получая данные из распарсенного дерева
+
+Полезные ссылки:
+http://www.codenet.ru/webmast/xml/part2.php
+http://www.script-coding.com/XML.html
+http://www.sql.ru/articles/mssql/03102702xmlin20minutes.shtml
+http://habrahabr.ru/post/127473/
+http://habrahabr.ru/post/185360/
+https://docs.oracle.com/javase/tutorial/jaxp/sax/parsing.html
+http://tutorials.jenkov.com/java-xml/sax-example.html
+https://docs.oracle.com/javase/tutorial/jaxp/dom/readingXML.html
+http://www.tutorialspoint.com/java_xml/java_dom_parse_document.htm
+http://www.javacodegeeks.com/2014/12/jaxb-tutorial-xml-binding.html
+http://examples.javacodegeeks.com/core-java/xml/bind/jaxb-marshal-example/
+http://www.mkyong.com/java/jaxb-hello-world-example/ - обратите внимание на зависимости
