@@ -4,9 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
+	static List<Person> collection = new ArrayList<Person>();
     static final String JDBC_DRIVER = "org.postgresql.Driver";
     static final String DB_URL = "jdbc:postgresql://localhost:5432/TheMunyDataBase";
 
@@ -23,8 +26,22 @@ public class Main {
         System.out.println("Connected");
         Statement stm = conn.createStatement();
 
-        ResultSet res = stm.executeQuery("select * from \"АвтоВладельцы\",\"Транспорт\"");
-            
+        ResultSet res = stm.executeQuery("select * from \"АвтоВладельцы\"");
+        while(res.next()){
+        	Person p = new Person(res.getString("имя"),
+        			res.getString("фамилия"),
+        			res.getString("отчество"),
+        			res.getDate("год_рождения"),
+        			res.getString("серия_номер_паспорта"),
+        			res.getDate("дата_выдачи_паспорта"),
+        			res.getString("адрес_прописки"),
+        			res.getInt("номер_прав"),
+        			res.getString("категория"),
+        			res.getString("список_правонарушений"), 
+        			res.getInt("primary_id"));
+        	collection.add(p);
+        }   
+       
         ResultSet res1 = stm.executeQuery("select * from \"АвтоВладельцы\",\"Транспорт\" "
         		+ "where \"фамилия\" = 'Старнов'AND  \"АвтоВладельцы\".primary_id = \"Транспорт\".\"foreignId\"");
 
@@ -43,6 +60,7 @@ public class Main {
 	}catch(Exception ex){
 		ex.printStackTrace();
 	}
-
+        System.out.println(collection.size());
+        System.out.println(collection.get(0).getFirstName());
 }
 }
